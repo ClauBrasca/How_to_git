@@ -1,0 +1,57 @@
+How to Git
+
+----Archivo actualizado constantemente----
+
+
+Git es un sistema de control de versiones distribuído.
+El control de versiones distribuído permite a los desarrolladores descargar un software,
+realizar cambios y subir la versión que han modificado.
+En criollo, que puedas tener la versión principal de tu software o información que quieras
+compartir, hacer cambios, subirlos y compartirlos nuevamente. Puede ser
+
+Este documento probablemente tendrá cambios futuros pero ésto es lo que entiendo hasta ahora:
+
+- Para iniciar hay que generar una SSH key. Con esta clave que es privada, es como la clave del
+banco, la usás solamente en la web o app específica y jamás de los jamases la compartís.
+
+- Lo primero sería entrar por ejemplo a GitHub y crear un repositorio y copiar la dirección del mismo.
+Al crear el repositorio se puede setear la licencia. Normalmente para proyectos simples se usa la GNU.
+
+
+- Una vez configurada, hay que clonar el repo en tu máquina:
+
+    git clone "dirección que copiaste de tu repo"
+
+- Después desde la terminal, yo uso Linux, hay que decirle a git que soy yo. Se hace
+a través del comando git config. 
+
+        git config user.name "usuario de GitHub
+        git config user.email "tu email"
+
+- Importante, deberías estar en el directorio donde querés guardar el repositorio o desde el cual querés
+subir los archivos.
+- Generar un git Status, te va a mostrar qué vas a subir a tu repositorio.
+
+    git status
+
+    git add . # añadir documentos nuevos o que hemos editado.
+
+- Una vez que subiste el archivo nuevo o lo modificaste. Podrías hacer también un  git diff que te muestra
+la diferencia entre las versiones. Entonces podés hacer un commit.
+
+
+    git commit -m "comment"
+
+- Si ya están listos los cambios se puede "pushear" con git push:
+
+    git push origin "nombre del branch"
+    #idealmente hay que pushearlo a un branch para que no dañe el master.
+    Además otros lo pueden chequear y aprobar tus cambios o rechazarlos si hay algo que no está bien.
+
+
+Otros comandos:
+
+    - git branch
+    #Lista los branch y el que tiene el * es en el que está.
+
+Por ahora es lo que sé más o menos bien, pero hay mucho más :D
